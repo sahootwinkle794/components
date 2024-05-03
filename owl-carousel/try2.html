@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sunsetsafaris</title>
     <!-- Bootstrap css start -->
-    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap css end -->
     <!-- Main style css start -->
-    <link href="style2.css" rel="stylesheet">
+    <link href="/css/style2.css" rel="stylesheet">
 
     <!-- Main style css end -->
     <!-- fontawesome css start -->
@@ -27,69 +27,82 @@
 
 <body>
     <div class="container mt-5">
-    <div class="owl-carousel owl-theme">
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
+            <div class="item"><img
+                    src="https://www.sunsetsafaris.com.au/images/Morten_Island_Get_Wrecked_1_Day_Tour_Instagram_1.jpg">
+            </div>
         </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-        <div class="item"><img
-                src="https://static.toiimg.com/photo/67382132.cms">
-        </div>
-    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         var owl = $('.owl-carousel');
         owl.owlCarousel({
-            items: 3,
             loop: true,
+            nav: true,
             margin: 10,
-            autoplay: true,
-            autoplayTimeout: 1000,
-            autoplayHoverPause: true
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                960: {
+                    items: 5
+                },
+                1200: {
+                    items: 4
+                }
+            }
         });
-        $('.play').on('click', function () {
-            owl.trigger('play.owl.autoplay', [1000])
-        })
-        $('.stop').on('click', function () {
-            owl.trigger('stop.owl.autoplay')
-        })
+        owl.on('mousewheel', '.owl-stage', function (e) {
+            if (e.deltaY > 0) {
+                owl.trigger('next.owl');
+            } else {
+                owl.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
 
     </script>
 </body>

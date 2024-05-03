@@ -1,4 +1,38 @@
-img{
+img {
   width: 100%;
   height: 250px;
 }
+
+button.owl-prev {
+  /* font-size: 30px !important; */
+  position: absolute;
+  top: 100px;
+  left: -50px;
+  background: transparent !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 2px solid #f08d2a !important;
+  border-radius: 80% !important;
+  color: #f08d2a !important;
+}
+
+button.owl-next {
+  position: absolute;
+  top: 100px;
+  right: -50px;
+  background: transparent !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 2px solid #f08d2a !important;
+  border-radius: 80% !important;
+  color: #f08d2a !important;
+}
+
+.owl-dots {
+  visibility: hidden;
+}
+
+/* .owl-carousel span{
+font-size: 30px !important;
+
+} */
