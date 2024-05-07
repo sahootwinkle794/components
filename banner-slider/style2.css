@@ -1,0 +1,53 @@
+.owl-carousel img {
+  width: 100%;
+  height: 500px;
+}
+.owl-dots {
+  visibility: hidden;
+}
+
+/* .owl-carousel span{
+font-size: 30px !important;
+
+} */
+/* .owl-item {
+  display: flex !important;
+  justify-content: center;
+} */
+
+.owl-item .item {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  100% {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+}
+
+.owl-item.active .item {
+  animation-name: fadeInRight;
+}
+
+.owl-item .item {
+  animation-name: fadeOutLeft;
+  position: relative;
+  z-index: 1;
+}
