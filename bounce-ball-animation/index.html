@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball with Gradient</title>
+   <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+        overflow: hidden;
+    }
+    .ball{
+        width: 160px;
+        height: 160px;
+        background: linear-gradient(45deg, red,blue);
+        border-radius: 50%;
+        position: absolute;
+        top: 140px;
+        left: 130px;
+        animation: bounce 1.2s infinite ease-in-out, colorChange 2s infinite alternate;
+
+    }
+    @keyframes bounce{
+        0%, 100% {
+            transform: translateY(0);
+
+        }
+        50% {
+            transform: translateY(-120px);
+        }
+    }
+    @keyframes colorChange {
+        0% {
+            background: linear-gradient(45deg,rgb(244, 244, 46),rgb(127, 120, 255));
+            
+        }
+        50% {
+            background: linear-gradient(45deg,rgb(255, 0, 0),rgb(15, 162, 203));
+        }
+        100% {
+            background: linear-gradient(45deg,rgb(0, 106, 255),rgb(15, 203, 84));
+        }
+    }
+   </style>
+</head>
+<body>
+
+    <div class="ball"></div>
+  
+
+</body>
+</html>
