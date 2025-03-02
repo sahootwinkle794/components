@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Loader</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            margin: 0;
+        }
+        .loader{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: spin 2s linear infinite;
+        }
+        .loader::before, .loader::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            box-shadow: 0 0 15px #0ff, 0 0 25px #0fff;
+        }
+    .loader::before{
+        transform: rotateX(75deg);
+        animation: glow1 1.5s linear infinite alternate;
+    }
+    .loader::after{
+        transform: rotateY(75deg);
+        animation: glow2 1.5s linear infinite alternate;
+    }
+    @keyframes spin {
+        0% {transform: rotate3d(1,1,1,0deg);}
+        100% {transform: rotate3d(1,1,1,360deg);}
+    } 
+    @keyframes glow1 {
+        0% {
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+        }
+        100%{
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+        }
+    }
+    @keyframes glow2{
+        0% {
+            box-shadow: 0 0 10px #2f00ff, 0 0 20px #2f00ff;
+        }
+        100%{
+            box-shadow: 0 0 20px #2f00ff, 0 0 40px #2f00ff;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
